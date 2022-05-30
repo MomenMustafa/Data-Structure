@@ -23,12 +23,13 @@ template <typename T> void Queue<T>::Push(T val)
 		Expand();
 
 	if (start == -1)
-		start = end = 1;
+		start = end = 0;
 
 	if (end == capacity)
 		end = 0;
 
 	queue[end++] = val;
+	++size;
 }
 
 template<typename T> inline T Queue<T>::Front()
@@ -48,7 +49,7 @@ template<typename T> inline T Queue<T>::Back()
 
 template<typename T> inline bool Queue<T>::IsEmpty()
 {
-	return size == capacity;
+	return size == 0;
 }
 
 template<typename T> inline int Queue<T>::Size()
@@ -63,9 +64,8 @@ template<typename T> inline T Queue<T>::Pop()
 	assert(!IsEmpty());
 	if (size == 1)
 		start = end = -1;
-
-	++start;
-	start = (start == capacity ? 0 : start);
+	--size;
+	return queue[(start++) % capacity];
 }
 
 template<typename T> Queue<T>::~Queue()
@@ -84,7 +84,7 @@ template<typename T> void Queue<T>::Expand()
 	}
 	delete[] queue;
 	queue = newQueue;
+	end = capacity;
 	capacity = newCapacity;
 	start = 0;
-	end = capacity;
 }
