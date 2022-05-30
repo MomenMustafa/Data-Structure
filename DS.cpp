@@ -8,5 +8,5 @@ int main()
 		q.Push(i);
 	}
 	std::cout << q.Pop() << std::endl;
-	q.Push(6);
+	q.Push(9);
 }
