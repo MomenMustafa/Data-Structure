@@ -1,28 +1,21 @@
 #include <iostream>
 #include "Vector.cpp"
-
+#include "deque.cpp"
+//#include<deque>
+using namespace std;
 int main()
 {
-	Vector<int>v;
-	puts(v.Empty() ? "emtpy" : "not empty");
-	for (int i = 0; i < 10; i++)
-	{
-		v.Push_back(i);
-	}
-	v.Reverse();
-	for (int i=0; i<v.Size();i++)
-		std::cout << v[i] << ' ';
-	/*for (int i = 0; i < v.Size(); i++)
-		std::cout << v[i] << ' ';
-	
-	std::cout << std::endl<<"sz "<<v.Size() << '\n';
-	int x = 1e2;
-	v.Insert(4, x);
-	x = v.erase(v.Size()-1);
-	std::cout << std::endl<<"x "<<x << '\n';
-	for (int i = 0; i < v.Size(); i++)
-		std::cout << v[i] << ' ';
+	//deque<int>dq;
 
-	v.Clear();
-	puts(v.Empty() ? "emtpy" : "not empty");*/
+	Deque<int>dq;
+	for (int i = 0; i < 5; i++)
+	{
+		dq.push_back(i);
+	}
+	dq.insert(10, 4);
+
+	for (int i = 0; i < dq.Size(); i++)
+	{
+		cout << dq[i] << ' ';
+	}
 }

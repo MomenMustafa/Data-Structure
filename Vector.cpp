@@ -86,8 +86,7 @@ template <typename T> void Vector<T>::Insert(int idx, T val)
 		Expand(idx, val);
 	else
 	{
-		int shifter = size - 1;
-		for (int i = shifter; i >idx; i--)
+		for (int i = size; i >idx; i--)
 		{
 			vector[i] = vector[i - 1];
 		}
