@@ -33,6 +33,12 @@
     <ClCompile Include="List.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BinaryNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Set.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stack.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Set.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
